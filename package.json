@@ -1,0 +1,29 @@
+{
+  "name": "log-generator",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ukmadlz/node-log-generator.git"
+  },
+  "keywords": [
+    "Logzio",
+    "Log",
+    "Kibana"
+  ],
+  "author": "Mike Elsmore <mike.elsmore@logz.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ukmadlz/node-log-generator/issues"
+  },
+  "homepage": "https://github.com/ukmadlz/node-log-generator#readme",
+  "dependencies": {
+    "faker": "^5.1.0",
+    "winston": "^3.3.3",
+    "winston-logzio": "^5.1.2"
+  }
+}
