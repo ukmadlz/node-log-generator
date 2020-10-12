@@ -29,7 +29,7 @@ const LEVELS = Object.keys(Winston.config.npm.levels);
 
 module.exports.generator = async () => {
   logger.debug('RUN LOG GENERATOR');
-  const LOGAMOUNT = Math.floor(Math.random() * 30);
+  const LOGAMOUNT = Math.floor(Math.random() * 10);
   for ( let i = 0; i < LOGAMOUNT; i++ ) {
     const randomLevel = Math.floor(Math.random() * LEVELS.length);
     const level = LEVELS[randomLevel];
@@ -37,7 +37,10 @@ module.exports.generator = async () => {
       counter: i,
       level,
       countryCode: Faker.address.countryCode(),
-      location: [Faker.address.latitude(),Faker.address.longitude()],
+      location: {
+        lat: Faker.address.latitude(),
+        lon: Faker.address.longitude()
+      },
     });
   }
 }
